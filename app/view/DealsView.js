@@ -1,11 +1,10 @@
 Ext.define('Demo.view.DealsView', {
-	extend: 'Ext.List',
+	extend: 'Ext.tab.Panel',
 	id: 'Demo-List',
 	config: {
 		fullscreen: true,
 		title: 'List Demo',
-		store: 'DealsStore',
-		itemTpl: '<table><tr><td width="200"><img src="{image}" height="100" /></td><td>{title}</td></table>',
+		tabBarPosition: 'bottom', 
 		items: [{
 			xtype: 'navigationbar',
             title: 'List Demo',
@@ -19,6 +18,18 @@ Ext.define('Demo.view.DealsView', {
        			iconCls: 'refresh',
        			align: 'right'
             }]
+		}, {
+			xtype: 'list',
+			title: 'Home',
+			iconCls: 'home',
+			store: 'DealsStore',
+			itemTpl: '<table><tr><td width="200"><img src="{image}" height="100" /></td><td>{title}</td></table>'
+			
+		}, {
+			xtype: 'panel',
+			title: 'More',
+			iconCls: 'more',
+			html: ''
 		}]
 	}
 });
