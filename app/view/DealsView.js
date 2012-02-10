@@ -1,6 +1,5 @@
 Ext.define('Demo.view.DealsView', {
 	extend: 'Ext.tab.Panel',
-	id: 'Demo-List',
 	config: {
 		fullscreen: true,
 		title: 'List Demo',
@@ -19,6 +18,7 @@ Ext.define('Demo.view.DealsView', {
        			align: 'right'
             }]
 		}, {
+			id: 'Demo-List',
 			xtype: 'list',
 			title: 'Home',
 			iconCls: 'home',
